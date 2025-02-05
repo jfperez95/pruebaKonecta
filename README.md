@@ -25,8 +25,7 @@ Esto creara las imagenes y el contenedor:
 ## EJECUTAR CON DOCKER
 1. **Clonar el repositorio**
    ```sh
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
+   git clone https://github.com/jfperez95/pruebaKonecta.git
 
 2. Ejecutar Docker Compose
 
