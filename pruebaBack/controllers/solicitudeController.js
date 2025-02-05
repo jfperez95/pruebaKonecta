@@ -58,7 +58,7 @@ exports.actualizarSolicitud = async (req, res, next) =>{
         const datosActualizar = req.body;
         const solicitud = await Solicitud.findByPk(idSolicitud);
         if(!solicitud){
-            return res.status(404).json({mensage: "Empleado no encontrado"})
+            return res.status(404).json({mensage: "Solicitud no encontrado"})
         }
 
         await solicitud.update(datosActualizar, {

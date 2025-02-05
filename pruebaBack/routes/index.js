@@ -45,7 +45,7 @@ module.exports = function(){
     //Mostrar las solicitudes
     router.get('/solicitudes', auth([1,2]), solicitudController.mostrarSolicitudes);
     //Mostrar una solicitud
-    router.get('/solicitudes/:id', auth([1]), solicitudController.mostrarUnaSolicitud);
+    router.get('/solicitudes/:id', auth([1,2]), solicitudController.mostrarUnaSolicitud);
     //Actualizar una solicitud
     router.put('/solicitudes/:id', auth([1]),  
     body('CODIGO').notEmpty().withMessage('La fecha de ingreso es obligatoria').customSanitizer(value => sanitizeHtml(value)),
