@@ -106,6 +106,10 @@ function EditarSolicitud() {
         return !CODIGO || !DESCRIPCION || !RESUMEN || !ID_EMPLEADO;
     };
 
+    if(!auth.auth){
+        navigate('/iniciar-sesion', {replace:true});
+    }
+
     return (
         <Fragment>
             <h1>Editar Empleado</h1>
