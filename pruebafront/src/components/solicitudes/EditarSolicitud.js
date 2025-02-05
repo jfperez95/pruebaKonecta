@@ -143,7 +143,7 @@ function EditarSolicitud() {
                 </div>
 
                 <div className="enviar">
-                    <input type="submit" className="btn btn-azul" value="Guardar Empleado" disabled={validarSolicitud()} />
+                    <input type="submit" className="btn btn-azul" value="Actualizar solicitud" disabled={validarSolicitud()} />
                 </div>
             </form>
         </Fragment>
