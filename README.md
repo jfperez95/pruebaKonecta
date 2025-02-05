@@ -28,11 +28,11 @@ Esto creara las imagenes y el contenedor:
    git clone https://github.com/tu-usuario/tu-repositorio.git
    cd tu-repositorio
 
-docker-compose up --build
-
 2. Ejecutar Docker Compose
 
+```sh
 docker-compose up --build
+```
 
 Esto ejecutará automáticamente:
 
