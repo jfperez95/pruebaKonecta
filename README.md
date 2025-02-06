@@ -15,7 +15,9 @@ Este proyecto es una **aplicación web completa** que permite la gestión de emp
 
 En primer lugar es necesario tener instalado docker en el equipo. Una vez esté instalado docker en el equipo, en la raiz del proyecto abra la consola y ejecute el siguiente comando.
 
+```sh
 docker-compose up --build
+```
 
 Esto creara las imagenes y el contenedor:
 * Dentro del contenedor ejecutará postgressql, además con un adeministrador visual llamado pgadmin
@@ -40,12 +42,30 @@ Frontend (pruebaFront) en http://localhost:3000
 PostgreSQL en un contenedor
 pgAdmin para gestión de la base de datos en http://localhost:5050 (usuario: admin@mail.com, contraseña: root)
 
-Si la base de datos prueba no se ha creado, puedes hacerlo manualmente ejecutando el siguiente comando dentro del contenedor PostgreSQL:
+En caso de  haber un error al ejecutarse abra la consola y ejecute los siguientes comandos:
 
-ejecutar docker exec -it postgres psql -U prueba -d prueba
 
-Luego, dentro del shell de PostgreSQL, ejecuta:
-CREATE DATABASE prueba
+```sh
+docker exec -it codigosnode-postgres-1 bash
+```
+```sh
+psql -U prueba -d postgres
+```
+```sh
+CREATE DATABASE prueba;
+```
+```sh
+\q
+```
+```sh
+exit
+```
+```sh
+docker-compose down -v
+```
+```sh
+docker-compose up --build
+```
 
 Frontend
 
@@ -53,6 +73,13 @@ Frontend
 Construido con React y Context API para el manejo de estado global.
 Lazy Loading para mejorar el rendimiento.
 Diferenciación de vistas por roles (Empleado/Admin).
+
+Al haber hecho correctamente los pasos anteriores tenga en cuenta que para realizar el login puede ingresar las siguientes credenciales
+
+**Usuario: ramiro@ramiro.com
+**Password: 123456
+
+Para todos los usuarios ya registrados inicialmente, la contreseña es 123456
 
 
 ## SEGURIDAD
